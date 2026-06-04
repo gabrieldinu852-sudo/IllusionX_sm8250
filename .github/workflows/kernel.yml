@@ -3,9 +3,13 @@
 # This runs on the latest Arch Linux docker image
 name: IllusionX-Pipeline
 on:
-  push:
-    branches:
-      - oos13
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch to build"
+        required: true
+        default: "oos13"
+
 jobs:
   build:
     runs-on: ubuntu-latest
