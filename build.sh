@@ -13,6 +13,7 @@ set -e
 CI_BUILD=$1
 
 # Hack for github actions
+pacman -Sy --noconfirm git
 git config --global --add safe.directory /github/workspace
 
 KERNEL_DIR="${PWD}"
